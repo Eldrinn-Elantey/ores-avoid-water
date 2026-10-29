@@ -87,3 +87,20 @@ jobs:
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git commit -am "Release $env:GITHUB_REF_NAME"
           git push origin "HEAD:$env:DEFAULT_BRANCH"
+
+      # Last, so a failed sync cannot leave the changelog without its stamped entry.
+      - name: Copy the README to the mod portal page
+        if: ${{ env.FACTORIO_API_KEY != '' }}
+        shell: pwsh
+        run: |
+          $info = Get-Content info.json -Raw | ConvertFrom-Json
+          $headers = @{ Authorization = "Bearer $env:FACTORIO_API_KEY" }
+
+          Invoke-RestMethod -Method Post -Headers $headers `
+              -Uri 'https://mods.factorio.com/api/v2/mods/edit_details' `
+              -Form @{
+                  mod = $info.name
+                  summary = $info.description
+                  description = Get-Content README.md -Raw
+                  source_url = "$env:GITHUB_SERVER_URL/$env:GITHUB_REPOSITORY"
+              } | Out-Null
