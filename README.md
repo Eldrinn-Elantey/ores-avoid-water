@@ -20,5 +20,3 @@ It changes newly generated chunks. Chunks you already explored keep their ore wh
 The mod edits the patch placement expressions of Space Exploration and of the base game. If a Space Exploration update changes their format, the mod leaves them as they are and writes a warning to `factorio-current.log`.
 
 [Water Ores](https://mods.factorio.com/mod/Water_Ores) lets ore spawn on water tiles, which works against this mod. Turn it off if you want ore on land.
-
-MIT licensed, see [License.txt](https://github.com/Eldrinn-Elantey/ores-avoid-water/blob/master/License.txt).
