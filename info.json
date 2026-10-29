@@ -1,0 +1,13 @@
+{
+    "name": "ores-avoid-water",
+    "version": "0.1.0",
+    "title": "Ores Avoid Water",
+    "author": "Eldrinn",
+    "homepage": "https://github.com/Eldrinn-Elantey/ores-avoid-water",
+    "description": "Ore patches spawn on land instead of lakes. Works with Space Exploration and vanilla resource placement.",
+    "factorio_version": "2.1",
+    "dependencies": [
+        "base>=2.1.0",
+        "? space-exploration"
+    ]
+}

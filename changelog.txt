@@ -1,0 +1,5 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.0.0
+  Changes:
+    - Ore patches prefer land over lakes, with Space Exploration and vanilla resource placement
+    - Starting patches avoid lakes again under Space Exploration
