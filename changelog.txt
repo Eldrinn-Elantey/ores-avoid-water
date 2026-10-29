@@ -1,5 +1,10 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.0
   Changes:
+    - Nothing yet
+---------------------------------------------------------------------------------------------------
+Version: 0.1.0
+Date: 2026-10-29
+  Changes:
     - Ore patches prefer land over lakes, with Space Exploration and vanilla resource placement
     - Starting patches avoid lakes again under Space Exploration
